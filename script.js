@@ -86,6 +86,7 @@ function deselectAnswers() {
 
 submitBtn.addEventListener("click", () => {
     // check to see the answer
+    validateSelection();
     const answer = getSelected();
 
     if (answer) {
@@ -102,3 +103,20 @@ submitBtn.addEventListener("click", () => {
         }
     }
 });
+
+function moveToHome() {
+    let text = "Are you sure to want to leave this page!";
+    if (confirm(text) == true) {
+        window.location.href='index.html';
+    }
+}
+
+function validateSelection() {
+    if(getSelected() == undefined) {
+        let messageLabel = document.getElementById('message');
+        messageLabel.setAttribute("class", "error");
+        messageLabel.innerHTML = "(&cross;) Kindly select an option";
+    } else {
+        message.innerHTML = "";
+    }
+}

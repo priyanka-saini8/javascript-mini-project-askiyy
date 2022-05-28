@@ -159,4 +159,11 @@ function emptyQuestionFields() {
     optionD.value = "";
 }
 
+function moveToHome() {
+    let text = "Are you sure to want to leave this page!";
+    if (confirm(text) == true) {
+        window.location.href='index.html'
+    }
+}
+
 displayQuestionOnPanel();
