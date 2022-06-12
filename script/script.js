@@ -107,7 +107,7 @@ submitBtn.addEventListener("click", () => {
 function moveToHome() {
     let text = "Are you sure to want to leave this page!";
     if (confirm(text) == true) {
-        window.location.href='index.html';
+        window.location.href='../index.html';
     }
 }
 
@@ -119,4 +119,11 @@ function validateSelection() {
     } else {
         message.innerHTML = "";
     }
+}
+
+function isEmptyQList() {
+    if(quizData.length == 0) {
+        alert("There is no questions in the list. Please add questions first.");
+    }
+    else window.location.href = '../html/play.html';
 }
