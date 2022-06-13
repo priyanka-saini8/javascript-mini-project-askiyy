@@ -2,7 +2,7 @@ let quizData;
 let data = JSON.parse(localStorage.getItem('quizDataLocal'));
 if (Array.isArray(data) && data.length > 0) {
     quizData = data;
-}
+} 
 else {
     quizData = [
         {
@@ -47,8 +47,13 @@ const optionC = document.getElementById('addanswerc');
 const optionD = document.getElementById('addanswerd');
 const btnAdd = document.getElementById('addQ');
 
+btnAdd.addEventListener("click", () => {
+    addQestion();
+    displayQuestionOnPanel();
+});
+
 function addQestion() {
-    if ((question.value == "") || (optionA.value == "") || (optionB.value == "") || (optionC.value == "") || (optionD.value == "") || (getSelected() == null)) {
+    if ((question.value == "") || (optionA.value == "") || (optionB.value == "") || (optionC.value == "") || (optionD.value == "") || (getSelected() == undefined)) {
         let messageLabel = document.getElementById('message');
         messageLabel.setAttribute("class", "error");
         messageLabel.innerHTML = "(&cross;) All fields are required";
@@ -108,10 +113,7 @@ function displayQuestionOnPanel() {
     }
     createQuizFile();
 }
-btnAdd.addEventListener("click", () => {
-    addQestion();
-    displayQuestionOnPanel();
-})
+
 
 function getSelected() {
     let answer = undefined;
