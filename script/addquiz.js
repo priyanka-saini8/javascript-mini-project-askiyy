@@ -47,6 +47,8 @@ const optionC = document.getElementById('addanswerc');
 const optionD = document.getElementById('addanswerd');
 const btnAdd = document.getElementById('addQ');
 
+displayQuestionOnPanel();
+
 btnAdd.addEventListener("click", () => {
     addQestion();
     displayQuestionOnPanel();
@@ -76,12 +78,11 @@ function addQestion() {
 }
 
 function displayQuestionOnPanel() {
+    const qpHeader = document.getElementById('qp-header');
     if (quizData.length == 0) {
-        const qpHeader = document.getElementById('qp-header');
         qpHeader.innerHTML = `<label class='question'>Question Panel</label><br>
                             <label>No question is added yet</label>`;
     } else {
-        const qpHeader = document.getElementById('qp-header');
         qpHeader.innerHTML = "<label class='question'>Question Panel</label>";
         for (var i = 0; i < quizData.length; i++) {
             const questionBox = document.createElement('div');
@@ -135,7 +136,7 @@ function deselectAnswers() {
 
 function displayTickCross(check, answer) {
     if (check == answer) return "&check;";
-    return "";
+    else return "";
 }
 
 function deleteQuestion(delIndex) {
@@ -148,11 +149,12 @@ function deleteQuestion(delIndex) {
     quizData.pop();
     displayQuestionOnPanel();
 }
+
 function createQuizFile() {
-    
     const quizDataJSON = JSON.stringify(quizData);
     localStorage.setItem("quizDataLocal", quizDataJSON);
 }
+
 function emptyQuestionFields() {
     question.value = "";
     optionA.value = "";
@@ -168,4 +170,3 @@ function moveToHome() {
     }
 }
 
-displayQuestionOnPanel();
