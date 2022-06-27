@@ -3,7 +3,24 @@
 - It can be used by friends and family members to play a fun quiz game by asking questions.
 - This Application makes use of LocalStorage for storing Questions for future games.
 - Users can add their questions too to create their custom quizzes.
+
+# Features
+- Let's you create your own Custom Quizzes.
+- Let's you play that custom-created quize.
+- Used Media Queries to make the site responsive. 
+- Saves your Questions in the Local Storage of the browser for future games, so that you don't need to create the quiz again.
+
+# Live Demo
+This project is hosted live [here](http://priyankasaini.rf.gd/quizapp/)
+
 # Screenshorts
-![Screenshot 2022-05-23 13-41-04](https://user-images.githubusercontent.com/63971975/169818746-6c075b9e-3228-47d1-ab4d-bc1330bbe833.png)
-![Screenshot 2022-05-23 18-04-05](https://user-images.githubusercontent.com/63971975/169820376-1b4beb41-0782-4808-bc66-939412f94105.png)
-![Screenshot 2022-05-23 18-06-12](https://user-images.githubusercontent.com/63971975/169820747-b211af54-ee25-4619-980f-34e8b98d2c33.png)
+![Quiz1](https://user-images.githubusercontent.com/63971975/176020782-17234a8f-d3dd-49af-bec9-425e7c3d5003.JPG)
+![Quiz2](https://user-images.githubusercontent.com/63971975/176020770-99308040-7dac-43fe-a137-e5ea3134883f.JPG)
+![Quiz3](https://user-images.githubusercontent.com/63971975/176020777-a1373601-78e6-4c64-adec-d7fcdc8d9dc5.JPG)
+### The Page is Responsive
+I have used Media Queries along with some CSS to make the site responsive so that
+![Res1](https://user-images.githubusercontent.com/63971975/176021482-1e7f9551-9217-488f-b07c-6a881b186f8c.JPG)
+![Res2](https://user-images.githubusercontent.com/63971975/176021804-7539e6dd-8196-4eb4-85af-abcbc50cc330.JPG)
+![Res3](https://user-images.githubusercontent.com/63971975/176021950-0d6046b5-c16c-4d5c-9293-85148f53966f.JPG)
+![Res4](https://user-images.githubusercontent.com/63971975/176022131-9f532aa9-8aae-47bd-b600-5c5f66c06153.JPG)
+
