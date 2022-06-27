@@ -10,45 +10,47 @@
 </head>
 
 <body>
-    <div class="main-header">
-        <button class="btn-header" onclick="moveToHome()">HOME</button>
-    </div>
-    <div class="question-panel" , id="questionPanel">
-        <div class="qp-header" , id="qp-header">
+    <div class="main-container">
+        <div class="main-header">
+            <button class="btn-header" onclick="moveToHome()">HOME</button>
         </div>
-    </div>
-    <div class="quiz-container" id="quiz">
-        <div class="quiz-header" id="quiz-header">
-            <label id="message"></label>
-            <label class="question">Question:</label>
-            <input type="text" id="addquestion" name="question" class="inputquestion"
-                placeholder="Type your Question" />
-            <ul>
-                <li>
-                    <input type="radio" id="a" name="answer" class="answer" />
-                    <label class="labelanswer" for="a">a:</label>
-                    <input type="text" id="addanswera" name="answer" class="inputanswer" placeholder="Option A" />
-                </li>
-                <li>
-                    <input type="radio" id="b" name="answer" class="answer" />
-                    <label class="labelanswer" for="b">b:</label>
-                    <input type="text" id="addanswerb" name="answer" class="inputanswer" placeholder="Option B" />
-                </li>
-                <li>
-                    <input type="radio" id="c" name="answer" class="answer" />
-                    <label class="labelanswer" for="c">c:</label>
-                    <input type="text" id="addanswerc" name="answer" class="inputanswer" placeholder="Option C" />
-                </li>
-                <li>
-                    <input type="radio" id="d" name="answer" class="answer" />
-                    <label class="labelanswer" for="d">d:</label>
-                    <input type="text" id="addanswerd" name="answer" class="inputanswer" placeholder="Option D" />
-                </li>
-            </ul>
+        <div class="quiz-container" id="quiz">
+            <div class="quiz-header" id="quiz-header">
+                <label id="message"></label>
+                <label class="question">Question:</label>
+                <input type="text" id="addquestion" name="question" class="inputquestion"
+                    placeholder="Type your Question" />
+                <ul>
+                    <li>
+                        <input type="radio" id="a" name="answer" class="answer" />
+                        <label class="labelanswer" for="a">a:</label>
+                        <input type="text" id="addanswera" name="answer" class="inputanswer" placeholder="Option A" />
+                    </li>
+                    <li>
+                        <input type="radio" id="b" name="answer" class="answer" />
+                        <label class="labelanswer" for="b">b:</label>
+                        <input type="text" id="addanswerb" name="answer" class="inputanswer" placeholder="Option B" />
+                    </li>
+                    <li>
+                        <input type="radio" id="c" name="answer" class="answer" />
+                        <label class="labelanswer" for="c">c:</label>
+                        <input type="text" id="addanswerc" name="answer" class="inputanswer" placeholder="Option C" />
+                    </li>
+                    <li>
+                        <input type="radio" id="d" name="answer" class="answer" />
+                        <label class="labelanswer" for="d">d:</label>
+                        <input type="text" id="addanswerd" name="answer" class="inputanswer" placeholder="Option D" />
+                    </li>
+                </ul>
+            </div>
+
+            <button id="addQ">Add Question</button>
+
         </div>
-        
-        <button id="addQ">Add Question</button>
-        
+        <div class="question-panel" , id="questionPanel">
+            <div class="qp-header" , id="qp-header">
+            </div>
+        </div>
     </div>
 </body>
 

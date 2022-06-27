@@ -55,12 +55,11 @@ btnAdd.addEventListener("click", () => {
 });
 
 function addQestion() {
+    let messageLabel = document.getElementById('message');
     if ((question.value == "") || (optionA.value == "") || (optionB.value == "") || (optionC.value == "") || (optionD.value == "") || (getSelected() == undefined)) {
-        let messageLabel = document.getElementById('message');
         messageLabel.setAttribute("class", "error");
         messageLabel.innerHTML = "(&cross;) All fields are required";
     } else {
-        let messageLabel = document.getElementById('message');
         messageLabel.setAttribute("class", "success");
         messageLabel.innerHTML = "(&check;) Question added";
         const questionData = {
@@ -84,7 +83,7 @@ function displayQuestionOnPanel() {
                             <label>No question is added yet</label>`;
     } else {
         qpHeader.innerHTML = "<label class='question'>Question Panel</label>";
-        for (var i = 0; i < quizData.length; i++) {
+        for (let i = 0; i < quizData.length; i++) {
             const questionBox = document.createElement('div');
             questionBox.setAttribute("id", "display-question-box");
             questionBox.setAttribute("class", "display-question-box");
@@ -124,7 +123,6 @@ function getSelected() {
             answer = answerEl.id;
         }
     });
-
     return answer;
 }
 
@@ -140,13 +138,10 @@ function displayTickCross(check, answer) {
 }
 
 function deleteQuestion(delIndex) {
-    for (var i = 0; i < quizData.length; i++) {
-        if (i == delIndex) {
-            for (var j = i; j < quizData.length; j++)
-                quizData[j] = quizData[j + 1];
-        }
+    for (let i = 0; i < quizData.length; i++) {
+        if (i == delIndex) 
+            quizData.splice(i,1);
     }
-    quizData.pop();
     displayQuestionOnPanel();
 }
 
@@ -166,7 +161,7 @@ function emptyQuestionFields() {
 function moveToHome() {
     let text = "Are you sure to want to leave this page!";
     if (confirm(text) == true) {
-        window.location.href='../index.html'
+        location.href='../index.html'
     }
 }
 

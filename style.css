@@ -5,8 +5,7 @@
 }
 
 body {
-    background-color: #b8c6db;
-    background-image: linear-gradient(to top left, #b8c6db , #f5f7fa );
+    background-image: linear-gradient(to top left, #b8c6db, #f5f7fa);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -16,17 +15,12 @@ body {
 }
 
 .quiz-container {
-    margin: auto;
-    position: absolute;
-    top: 140px;
-    left: 140px;
-    right: 140px;
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 0 10px 2px rgba(100, 100, 100, 0.1);
     overflow: hidden;
-    width: 600px;
-    max-width: 100%;
+    width: 100%;
+    max-width: 600px;
 }
 
 .quiz-header {
@@ -74,8 +68,6 @@ button:focus {
     outline: none;
 }
 
-/*  */
-
 .option-container {
     background-color: #fff;
     display: flex;
@@ -91,7 +83,7 @@ button:focus {
 
 .inputquestion {
     border-color: #8e44ad;
-    border-width: 2.5px;
+    border-width: 2px;
     width: 100%;
     height: 3.3rem;
     padding: 10px;
@@ -99,12 +91,19 @@ button:focus {
     font-weight: bold;
     font-size: large;
     outline: none;
+    border-style: solid;
+    border-radius: 5px;
 
+}
+
+.inputquestion:hover,.inputanswer:hover {
+    border-color: #732d91;
+    border-width: 3px;
 }
 
 .inputanswer {
     border-color: #8e44ad;
-    border-width: 1px;
+    border-width: 2px;
     width: 50%;
     height: 2.5rem;
     padding: 10px;
@@ -113,6 +112,8 @@ button:focus {
     font-size: large;
     outline: none;
     cursor: pointer;
+    border-style: solid;
+    border-radius: 5px;
 }
 
 label.question {
@@ -125,7 +126,6 @@ label.question {
 label.error {
     color: red;
     font-size: large;
-    border-radius: 10px;
     padding: 5px;
     font-weight: bold;
     display: block;
@@ -135,7 +135,6 @@ label.error {
 label.success {
     color: green;
     font-size: large;
-    border-radius: 10px;
     padding: 5px;
     font-weight: bold;
     display: block;
@@ -143,15 +142,14 @@ label.success {
 }
 
 .question-panel {
-    background-color: #fff;
     border-radius: 0px;
     box-shadow: 0 0 10px 2px rgba(100, 100, 100, 0.1);
     overflow-y: auto;
     width: 25%;
-    max-width: 100%;
-    height: 100%;
-    position: absolute;
+    position: fixed;
+    top: 0px;
     right: 0px;
+    bottom: 0px;
     background-image: linear-gradient(315deg, #b8c6db 0%, #f5f7fa 100%);
 }
 
@@ -170,39 +168,41 @@ label.success {
 }
 
 button.delete {
-    background-color: orangered;
+    background-color: rgb(255, 102, 0);
     border: none;
     color: white;
     cursor: pointer;
     display: inline;
-    font-family: inherit;
     font-size: 0.8rem;
-    text-size-adjust: auto;
-    width: 20%;
-    padding: 0rem;
+    width: 66px;
+    padding: 0.1rem;
     float: right;
-    font-weight: bold;
-    border-radius: 50px;
+    font-weight: 500;
+    border-radius: 30px;
+    transition: background-color 0.15s;
+    box-shadow: 1px 1px 40px rgb(255, 255, 255);
 }
 
 button.delete:hover {
-    background-color: red;
+    background-color: rgb(255, 0, 0);
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
 }
 
 .main-header {
     margin: auto;
-    position: absolute;
-    top: 70px;
-    left: 140px;
-    right: 140px;
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 0 10px 2px rgba(100, 100, 100, 0.1);
     overflow: hidden;
-    width: 600px;
-    max-width: 100%;
+    width: 100%;
+    max-width: 600px;
     display: flex;
-    flex-direction: row;
+    margin-bottom: 10px;
 }
 
 .btn-header {
@@ -211,7 +211,6 @@ button.delete:hover {
     color: white;
     cursor: pointer;
     display: block;
-    font-family: inherit;
     font-size: 1.1rem;
     width: auto;
     padding: 1rem;
@@ -226,4 +225,20 @@ button.delete:hover {
 .btn-header:focus {
     background-color: #5e3370;
     outline: none;
+}
+
+@media screen and (max-width: 1200px) {
+    .question-panel {
+        margin-top: 50px;
+        position: static;
+        width: 100%;
+    }
+
+    .quiz-header {
+        padding: 2rem;
+    }
+
+    .main-container {
+        padding: 100px 5px;
+    }
 }

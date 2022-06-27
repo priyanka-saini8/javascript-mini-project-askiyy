@@ -1,44 +1,7 @@
 let quizData;
 let data = JSON.parse(localStorage.getItem('quizDataLocal'))
-if (Array.isArray(data)) {
+if (Array.isArray(data) && data.length > 0) 
     quizData = data;
-}
-else {
-    quizData = [
-        {
-            question: "What is the most used programming language in 2019?",
-            a: "Java",
-            b: "C",
-            c: "Python",
-            d: "JavaScript",
-            correct: "d",
-        },
-        {
-            question: "Who is the President of US?",
-            a: "Florin Pop",
-            b: "Donald Trump",
-            c: "Ivan Saldano",
-            d: "Mihai Andrei",
-            correct: "b",
-        },
-        {
-            question: "What does HTML stand for?",
-            a: "Hypertext Markup Language",
-            b: "Cascading Style Sheet",
-            c: "Jason Object Notation",
-            d: "Helicopters Terminals Motorboats Lamborginis",
-            correct: "a",
-        },
-        {
-            question: "What year was JavaScript launched?",
-            a: "1996",
-            b: "1995",
-            c: "1994",
-            d: "none of the above",
-            correct: "b",
-        }
-    ];
-}
 
 const quiz = document.getElementById("quiz");
 const answerEls = document.querySelectorAll(".answer");
@@ -107,7 +70,7 @@ function deselectAnswers() {
 function moveToHome() {
     let text = "Are you sure to want to leave this page!";
     if (confirm(text) == true) {
-        window.location.href='../index.html';
+        location.href='../index.html';
     }
 }
 
@@ -125,5 +88,5 @@ function isEmptyQList() {
     if(quizData.length == 0) {
         alert("There is no questions in the list. Please add questions first.");
     }
-    else window.location.href = '../html/play.html';
+    else location.href = '/html/play.html';
 }
