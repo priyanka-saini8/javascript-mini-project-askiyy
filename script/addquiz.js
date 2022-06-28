@@ -1,6 +1,6 @@
 let quizData;
 let data = JSON.parse(localStorage.getItem('quizDataLocal'));
-if (Array.isArray(data) && data.length > 0) {
+if (Array.isArray(data)) {
     quizData = data;
 } 
 else {
