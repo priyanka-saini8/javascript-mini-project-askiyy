@@ -124,5 +124,5 @@ function isEmptyQList() {
     if (quizData.length == 0) {
         alert("There is no questions in the list. Please add questions first.");
     }
-    else location.href = '/html/play.html';
+    else location.href = 'html/play.html';
 }
